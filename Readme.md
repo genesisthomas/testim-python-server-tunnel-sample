@@ -1,8 +1,12 @@
 
+<h2> Testim Python web server tunnel sample</h2> </br>
+
+[![Testim E2E](https://github.com/genesisthomas/testim-python-server-tunnel-sample/actions/workflows/github.yaml/badge.svg)](https://github.com/genesisthomas/testim-python-server-tunnel-sample/actions/workflows/github.yaml)
+
 Features: </br>
 
-* Ability to kill & start python web server automatically at the start of suite runs with any mentioned port(default - 3000).
-* Override’s base url port of all tests with the mentioned port.
+* Ability to kill & start python web server automatically at the start of suite runs using any mentioned port (default - 3000).
+* Override’s base url port of all tests using the mentioned port.
 * Kills the web server at the end of suite runs.
 * Ability to exit the execution in case of python web server errors.</br>
 
