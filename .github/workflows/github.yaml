@@ -10,4 +10,4 @@ jobs:
               with:
                 node-version: '16.13.0'
             - run: npm install -g @testim/testim-cli
-            - run: testim --token "$DEMO_TOKEN" --project "$DEMO_PROJECT" -c 'config.js' --name 'Python Test' --tunnel --tunnel-port 3000
+            - run: testim --token "${{DEMO_TOKEN}}" --project "${{DEMO_PROJECT}}" -c 'config.js' --name 'Python Test' --tunnel --tunnel-port 3000
