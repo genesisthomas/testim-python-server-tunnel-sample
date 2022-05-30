@@ -1,5 +1,6 @@
 "use strict";
 const { spawn } = require('node:child_process');
+let os = require("os")
 
 exports.config = {
     // Set project id. More info: https://help.testim.io/docs/the-command-line-cli 
@@ -11,6 +12,7 @@ exports.config = {
     baseUrl: `http://localhost:${process.env.PORT || 3000}`,
     // Hook that gets executed before the suite starts
     beforeSuite: function(suite) {
+        exports.workspace = process.env.workspace || process.cwd();
         // kills any running python process, starts python server
         startPythonServer("./server.py", process.env.PORT || 3000);
     },
