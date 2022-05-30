@@ -12,9 +12,17 @@ exports.config = {
     baseUrl: `http://localhost:${process.env.PORT || 3000}`,
     // Hook that gets executed before the suite starts
     beforeSuite: function(suite) {
-        exports.workspace = process.env.workspace || process.cwd();
         // kills any running python process, starts python server
         startPythonServer("./server.py", process.env.PORT || 3000);
+        // Sample to override testdata from config.js
+        let workspace = process.env.workspace || process.cwd();
+        return {
+            overrideTestData: {
+                "Python Test": {
+                    workspace: `${workspace}/hello.py`
+                }
+            }
+        }
     },
     // Hook that gets executed after the suite has ended
     afterSuite: function(suite) {
