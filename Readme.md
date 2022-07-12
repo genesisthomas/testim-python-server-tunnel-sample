@@ -11,7 +11,7 @@ Features: </br>
 * Ability to exit the execution in case of python web server errors.</br>
 
 Prerequisites: </br>
-* Testim supports all LTS versions of Node.js. (12.13+ ,14.15+ and 16.13+) </br>
+* Testim supports all LTS versions of Node.js. (14.15+ and 16.13+) </br>
 * Install testim:  ```npm install -g @testim/testim-cli```
 
 Steps to setup: </br>
@@ -27,3 +27,5 @@ Steps to setup: </br>
 
 Note:</br>
 * Change way of exporting & accessing variables if running in windows.
+* Pass parameters for all test runs using [JSON parameters](https://help.testim.io/docs/json-parameters-file-parameters#using-the-parameters-in-the-cli).
+* Change BASE URL in runtime by following this [doc](https://help.testim.io/docs/base-url).
